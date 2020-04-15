@@ -1,1 +1,27 @@
 // Navigation Styles here
+header{
+    display: flex; 
+    align-items: baseline; 
+    justify-content: space-evenly; 
+    border-bottom: 2px dashed @navigation-border;
+    padding: 2rem;
+
+    a{    
+        margin: 2rem;
+        font-size: 16px;
+    }
+   
+    @media(max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        a {
+            //border: 1px solid gray;
+            width: fit-content;
+            justify-content: space-evenly;
+            
+        }// closes header links
+      }// closes media query 
+  }// closes header

@@ -1,13 +1,12 @@
 .home {
 
+  //Let's Go! Section
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
-    
+ 
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -21,11 +20,36 @@
         border-radius: 10px;
       }
     }
+    @media(max-width: 500px){
+      flex-direction: column;
+      align-content: center;
+      
+      .text-content{
+        width: fit-content;
+      }
+
+      .img-content{
+        width: fit-content;
+        padding-left: 4rem;
+      }
+    }
   }
 
+  .container-fun-bus{
+      h2{
+        padding-top: 2rem;
+      }//closes h2
+
+      p{
+        border-bottom: 2px dashed @navigation-border;
+      }//closes p
+  }//closes container for fun-bus section
+
+  //Adventrue Awaits Section
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    flex-direction: row-reverse;
 
     .text-content {
       padding-left: 1%;
@@ -36,8 +60,16 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media(max-width: 500px){
+
+      .img-content{
+        padding-right: 4rem;
+      }
+    }
   }
 
+  //Pick Your Destination Section
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
@@ -56,6 +88,35 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn{
+        border: 1px solid @button-bg;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        width: 75%;
+        color: @white;
+        background: @button-bg;
+        text-align: center;
+      }// closes btn
+    }// closes destination
+
+    @media(max-width: 500px){
+       // border: 1px solid gray;
+        flex-direction: column;
+        align-content: center;
+        padding: 5rem;
+
+        .destination{
+          //border: 1px solid gray;
+          width: fit-content;
+        }
     }
-  }
+  }// closes content pick
+
+  @media(max-width: 500px){
+    margin-left: 2rem;
+    margin-right: 2rem;
+    ;
+  } // closes media margin
 }// home
